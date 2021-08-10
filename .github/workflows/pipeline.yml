@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: 'clone-repo'
         uses: actions/checkout@v2
+
+      - name: 'clone-submodule'
+        uses: actions/checkout@v2
         with:
           repository: test-submodule-m/test-submodule
           ssh-key: ${{ secrets.TEST }}
