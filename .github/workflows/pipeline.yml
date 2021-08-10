@@ -9,15 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: 'father repo'
+      - name: 'clone-repo'
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: 'submodule-repo'
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          repository: test-submodule-m/test-submodule
           ssh-key: ${{ secrets.TEST }}
           submodules: 'true'
       - uses: actions/setup-node@v2
