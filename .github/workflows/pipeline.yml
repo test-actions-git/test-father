@@ -9,10 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: 'father repo'
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/checkout@v2
+      - name: 'submodule-repo'
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
           repository: test-submodule-m/test-submodule
