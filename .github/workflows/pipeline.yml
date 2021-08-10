@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: '14'
       - name: 'install dependences'
-        run: ls -l   
+        run: cd ../ && ls -l   
