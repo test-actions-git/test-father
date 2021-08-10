@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: test-submodule-m/test-submodule
           ssh-key: ${{ secrets.TEST }}
           submodules: 'true'
       - uses: actions/setup-node@v2
