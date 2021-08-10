@@ -20,10 +20,14 @@ jobs:
           path: src/core
           ref: main
           submodules: 'recursive'
-      - uses: actions/setup-node@v2
+
+      - name: 'set nodejs'
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
+
       - name: 'install dependences'
-        run: npm install
+        run: npm install --no-audit --no-found --no-optional
+        
       - name: 'build'
         run: npm run build  
