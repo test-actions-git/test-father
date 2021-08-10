@@ -9,12 +9,12 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: 'clone-repo'
+      - name: Clone-repo 🛎️
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: 'clone-submodule'
+      - name: Clone-submodule 🛎️
         uses: actions/checkout@v2
         with:
           repository: test-submodule-m/test-submodule
@@ -33,3 +33,9 @@ jobs:
 
       - name: 'build'
         run: npm run build  
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: main # The branch the action should deploy to.
+          folder: dist
