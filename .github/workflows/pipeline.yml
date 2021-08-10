@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: git@github.com:test-submodule-m/test-submodule.git
           ssh-key: ${{ secrets.TEST }}
           submodules: 'recursive'
+          path: submodule
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
