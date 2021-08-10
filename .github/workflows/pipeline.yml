@@ -19,6 +19,6 @@ jobs:
         with:
           node-version: '14'
       - name: 'install dependences'
-        run: npm install --no-audit --no-found --no-optional
+        run: npm install
       - name: 'build'
         run: npm run build  
