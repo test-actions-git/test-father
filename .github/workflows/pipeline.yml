@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: 'clone-repo'
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: 'clone-submodule'
         uses: actions/checkout@v2
@@ -28,6 +30,6 @@ jobs:
 
       - name: 'install dependences'
         run: npm install --no-audit --no-found --no-optional
-        
+
       - name: 'build'
         run: npm run build  
