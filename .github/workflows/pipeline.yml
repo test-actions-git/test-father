@@ -34,8 +34,8 @@ jobs:
       - name: 'build'
         run: npm run build  
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: main # The branch the action should deploy to.
-          folder: dist
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@4.1.4
+      #   with:
+      #     branch: main # The branch the action should deploy to.
+      #     folder: dist
