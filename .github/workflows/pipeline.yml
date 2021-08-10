@@ -12,12 +12,13 @@ jobs:
       - name: 'clone-repo'
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           repository: test-submodule-m/test-submodule
           ssh-key: ${{ secrets.TEST }}
-          submodules: 'true'
+          path: src/core
+          ref: main
+          submodules: 'recursive'
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
       - name: 'install dependences'
-        run: cd ../ && ls -l   
+        run: ls -l   
